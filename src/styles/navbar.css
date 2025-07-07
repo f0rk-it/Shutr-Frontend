@@ -11,7 +11,7 @@
     z-index: 1000;
     
     /* Glassmorphism */
-    background: rgba(255, 255, 255, 0.6);
+    background: transparent;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }

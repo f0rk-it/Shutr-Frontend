@@ -1,5 +1,21 @@
 #hero {
-    width: 98vw;
+    width: 100%;
     height: 100vh;
-    background: url('../assets/background.png');
+    background: url('../assets/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+#about {
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
