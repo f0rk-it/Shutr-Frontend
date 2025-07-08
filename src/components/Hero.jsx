@@ -14,9 +14,9 @@ export default function Hero() {
                 <p className='subheading'>Built for moments that deserve more.</p>
 
                 <div className='cta-links'>
-                    <Link to='/book'>
+                    <a href='#pricing'>
                         <CtaButton text='Book A Session' className='book-a-session-btn' />
-                    </Link>
+                    </a>
 
                     <Link to='/gallery'>
                         <CtaButton text='Explore Gallery' className='explore-portfolio-btn' />

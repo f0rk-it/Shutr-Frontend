@@ -24,15 +24,9 @@ export default function NavBar () {
                 </Link>
             </div>
 
-            <div className='navbar-center'>
-                <Link to='/about' className='navbar-link'>About</Link>
-                <Link to='/gallery' className='navbar-link'>Gallery</Link>
-                <Link to='/submit-photo' className='navbar-link'>Submit Photo for Editing</Link>
-            </div>
-
             <div className='navbar-right'>
-                <Link to='/book'>
-                    <CtaButton text='Book A Session' className='navbar-btn' />
+                <Link to='/gallery'>
+                    <CtaButton text='Explore Gallery' className='navbar-btn' />
                 </Link>
             </div>
         </nav>
