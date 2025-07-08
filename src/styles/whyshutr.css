@@ -7,6 +7,9 @@
 .title {
     margin-bottom: 50px;
     font-size: 2.5rem;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 img {
@@ -32,6 +35,8 @@ input[type="radio"] {
     width: min(100% - 4rem, 800px);
     margin-inline: auto;
     display: grid;
+    max-width: 100%;
+    box-sizing: border-box;
 
     counter-reset: my-counter;
 }
@@ -48,14 +53,16 @@ input[type="radio"] {
     grid-template-columns: var(--cards-grid-cols);
     grid-template-rows: var(--cards-grid-rows);
     gap: var(--cards-grid-gap);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
     .card {
-        --cards-grid-cols: var(--img-w) auto;
-        --cards-grid-rows: auto;
-        --cards-grid-gap: 4rem;
-        --cards-footer-justify: start;
+        --cards-grid-cols: auto;
+        --cards-grid-rows: var(--img-w) auto;
+        --cards-grid-gap: 2rem;
+        --cards-footer-justify: center;
     }
 }
 
@@ -70,6 +77,8 @@ input[type="radio"] {
     transform-origin: center;
     object-fit: cover;
     box-shadow: 0 0 5px 3px rgba(0 0 0 / 0.05);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 input:nth-of-type(1):checked + .card ~ .card > .card-img {
@@ -186,5 +195,135 @@ input:checked +.card > .card-img{
     50%{
         translate: -150% 0;
         --angle: 0deg;
+    }
+}
+
+/* Responsive Design for Why Shutr Section */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    
+    .card-img {
+        width: 300px;
+        height: 180px;
+    }
+    
+    .cards {
+        width: min(100% - 3rem, 700px);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .cards {
+        --img-w: 180px;
+        width: min(100% - 2rem, 600px);
+        max-width: calc(100vw - 2rem);
+        margin: 0 auto;
+    }
+    
+    .card {
+        --cards-grid-gap: 1.5rem;
+    }
+    
+    .card-img {
+        width: 280px;
+        height: 160px;
+        max-width: calc(100vw - 4rem);
+    }
+    
+    .card-data > h2 {
+        font-size: 1.3rem;
+    }
+    
+    .card-data > p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        --cards-grid-cols: auto;
+        --cards-grid-rows: var(--img-w) auto;
+        --cards-grid-gap: 1.25rem;
+        --cards-footer-justify: center;
+    }
+    
+    .card-img {
+        width: 250px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+    }
+    
+    .cards {
+        --img-w: 160px;
+        width: min(100% - 1.5rem, 400px);
+        max-width: calc(100vw - 1.5rem);
+    }
+    
+    .card {
+        --cards-grid-gap: 1rem;
+    }
+    
+    .card-img {
+        width: 220px;
+        height: 120px;
+        max-width: calc(100vw - 3rem);
+        width: min(220px, calc(100vw - 3rem));
+    }
+    
+    .card-data > h2 {
+        font-size: 1.2rem;
+    }
+    
+    .card-data > p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .card-data > footer {
+        gap: 1.5rem;
+    }
+    
+    .card-data > footer label {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .cards {
+        width: min(100% - 1rem, 320px);
+        max-width: calc(100vw - 1rem);
+    }
+    
+    .card-img {
+        max-width: calc(100vw - 2rem);
+        width: min(200px, calc(100vw - 2rem));
+    }
+    
+    .card-data > h2 {
+        font-size: 1.1rem;
+    }
+    
+    .card-data > footer {
+        gap: 1rem;
     }
 }

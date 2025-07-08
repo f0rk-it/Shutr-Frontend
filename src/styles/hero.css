@@ -188,6 +188,60 @@
     }
 }
 
+/* Overflow prevention for hero elements */
+.hero-text, .hero-carousel {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.cta-links {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure buttons don't cause overflow */
+.book-a-session-btn,
+.explore-portfolio-btn {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Additional mobile overflow prevention */
+@media (max-width: 768px) {
+    .hero-text {
+        width: 100%;
+        max-width: calc(100vw - 2rem);
+        box-sizing: border-box;
+    }
+    
+    .hero-carousel {
+        width: 200px;
+        max-width: calc(100vw - 2rem);
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    .cta-links {
+        width: 100%;
+        max-width: calc(100vw - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        max-width: calc(100vw - 1.5rem);
+    }
+    
+    .hero-carousel {
+        width: 180px;
+        max-width: calc(100vw - 1.5rem);
+    }
+    
+    .cta-links {
+        max-width: calc(100vw - 1.5rem);
+    }
+}
+
 /* Ensure home.css styles are compatible */
 @media (max-width: 768px) {
     #hero {
