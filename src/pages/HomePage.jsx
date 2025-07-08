@@ -1,6 +1,7 @@
 import '../styles/home.css'
 import NavBar from '../components/NavBar'
 import Hero from '../components/Hero'
+import WhyShutr from '../components/WhyShutr'
 
 export default function HomePage() {
     return (
@@ -9,7 +10,9 @@ export default function HomePage() {
             <section id='hero'>
                 <Hero />
             </section>
-            <section id='about'></section>
+            <section id='why-shutr'>
+                <WhyShutr />
+            </section>
         </>
     )
 }

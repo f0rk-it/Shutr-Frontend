@@ -58,7 +58,3 @@
     align-items: center;
     gap: 16px;
 }
-
-.navbar-btn:hover {
-    background-color: #222;
-}
