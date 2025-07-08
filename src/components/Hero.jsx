@@ -4,6 +4,7 @@ import IsaacTwo from '../assets/shutr/isaac-2.jpg'
 import IsaacThree from '../assets/shutr/isaac-3.jpg'
 import IsaacFour from '../assets/shutr/isaac-4.jpg'
 import CtaButton from './CtaButton'
+import ImageWithSkeleton from './ImageWithSkeleton'
 import { Link } from 'react-router-dom'
 
 export default function Hero() {
@@ -25,10 +26,30 @@ export default function Hero() {
             </div>
 
             <div className='hero-carousel'>
-                <img src={IsaacOne} alt="Isaac Shots" />
-                <img src={IsaacTwo} alt="Isaac Shots" />
-                <img src={IsaacThree} alt="Isaac Shots" />
-                <img src={IsaacFour} alt="Isaac Shots" />
+                <ImageWithSkeleton
+                    src={IsaacOne}
+                    alt="Isaac Shots"
+                    className="hero-carousel-img"
+                    skeletonClassName="hero-skeleton"
+                />
+                <ImageWithSkeleton
+                    src={IsaacTwo}
+                    alt="Isaac Shots"
+                    className="hero-carousel-img"
+                    skeletonClassName="hero-skeleton"
+                />
+                <ImageWithSkeleton
+                    src={IsaacThree}
+                    alt="Isaac Shots"
+                    className="hero-carousel-img"
+                    skeletonClassName="hero-skeleton"
+                />
+                <ImageWithSkeleton
+                    src={IsaacFour}
+                    alt="Isaac Shots"
+                    className="hero-carousel-img"
+                    skeletonClassName="hero-skeleton"
+                />
             </div>
         </>
     )

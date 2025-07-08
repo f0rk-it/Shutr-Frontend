@@ -1,0 +1,77 @@
+/* Skeleton Loading Animation */
+.skeleton {
+    background: linear-gradient(90deg, #f8f8f8 25%, #fcf5eb 50%, #f8f8f8 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: inherit;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Image skeleton wrapper */
+.image-skeleton-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.image-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f8f8f8 25%, #fcf5eb 50%, #f8f8f8 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.image-skeleton.loaded {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Image loading states */
+.image-loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-loading.loaded {
+    opacity: 1;
+}
+
+/* Specific skeleton styles for different components */
+.hero-skeleton {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    border: 10px solid #f2f2f2;
+}
+
+.card-skeleton {
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+
+.gallery-skeleton {
+    border-radius: 12px;
+}
+
+/* Dark theme skeleton (optional) */
+@media (prefers-color-scheme: dark) {
+    .skeleton,
+    .image-skeleton {
+        background: linear-gradient(90deg, #3a3a3a 25%, #4a4a4a 50%, #3a3a3a 75%);
+        background-size: 200% 100%;
+    }
+}

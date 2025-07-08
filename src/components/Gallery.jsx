@@ -1,5 +1,6 @@
 import '../styles/gallery.css'
 import { useState } from 'react'
+import ImageWithSkeleton from './ImageWithSkeleton'
 
 // Import all images
 import Beach from '../assets/shutr/beach.jpg'
@@ -65,9 +66,11 @@ export default function Gallery() {
                             className={`gallery-item item-${(index % 4) + 1}`}
                             onClick={() => openModal(image)}
                         >
-                            <img 
+                            <ImageWithSkeleton 
                                 src={image.src} 
                                 alt={image.alt}
+                                className="gallery-image"
+                                skeletonClassName="gallery-skeleton"
                                 loading="lazy"
                             />
                             <div className="gallery-overlay">
