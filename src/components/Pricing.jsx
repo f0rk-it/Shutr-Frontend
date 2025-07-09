@@ -1,7 +1,19 @@
 import '../styles/pricing.css'
 import CtaButton from './CtaButton'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 export default function Pricing() {
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            easing: 'ease-out',
+            once: false,
+            offset: 120
+        })
+    }, [])
+
     const handleWhatsAppRedirect = (serviceName) => {
         const phoneNumber = "+2348064189608"
         let message = ""
@@ -75,7 +87,7 @@ export default function Pricing() {
 
             <div className="pricing-grid">
                 {pricingTiers.map((tier, index) => (
-                    <div key={index} className={`pricing-card ${tier.popular ? 'popular' : ''}`}>
+                    <div key={index} className={`pricing-card ${tier.popular ? 'popular' : ''}`} data-aos="fade-up" data-aos-delay={`${index * 200}`}>
                         {tier.popular && <div className="popular-badge">Most Popular</div>}
                         
                         <div className="pricing-header-content">
