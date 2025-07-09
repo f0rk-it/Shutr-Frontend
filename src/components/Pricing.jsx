@@ -3,6 +3,8 @@ import CtaButton from './CtaButton'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import { FiGithub } from 'react-icons/fi'
+import { FaXTwitter, FaWhatsapp } from 'react-icons/fa6'
 
 export default function Pricing() {
     useEffect(() => {
@@ -117,6 +119,22 @@ export default function Pricing() {
                     </div>
                 ))}
             </div>
+
+            <footer className='footer'>
+                <p>© {new Date().getFullYear()} Shutr • Built by f0rk_it🌵</p>
+
+                <div className='social_icons'>
+                    <a href="https://github.com/f0rk-it" target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
+                        <FiGithub className='icon' />
+                    </a>
+                    <a href="https://x.com/f0rk_it" target='_blank' rel='noopener noreferrer' aria-label='Twitter/X'>
+                        <FaXTwitter className='icon' />
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=2349132135506" target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
+                        <FaWhatsapp className='icon' />
+                    </a>
+                </div>
+            </footer>
         </section>
     )
 }
