@@ -1,3 +1,9 @@
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
+
 /* Skeleton Loading Animation */
 .skeleton {
     background: linear-gradient(90deg, #f8f8f8 25%, #fcf5eb 50%, #f8f8f8 75%);
@@ -49,6 +55,7 @@
 
 .image-loading.loaded {
     opacity: 1;
+    rotate: 0deg;
 }
 
 /* Specific skeleton styles for different components */

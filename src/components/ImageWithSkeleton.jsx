@@ -20,7 +20,7 @@ export default function ImageWithSkeleton({ src, alt, className, skeletonClassNa
                     width: '100%', 
                     height: '100%', 
                     objectFit: 'cover',
-                    display: 'block'
+                    display: 'block',
                 }}
             />
         </div>

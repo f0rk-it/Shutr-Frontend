@@ -58,7 +58,7 @@ body {
 #why-shutr {
     width: 100%;
     max-width: 100vw;
-    height: 80vh;
+    /* height: 95vh; */
     background: url('../assets/background.svg');
     background-position: center;
     background-size: cover;
